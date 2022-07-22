@@ -3,8 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock, paper, scissors</title>
+    <style>
+      html {
+        background: rgb(220, 220, 220);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial;
+      }
+      .score-count {
+        background-color:rgb(103, 177, 171);
+        color:rgb(42, 42, 42);
+        font-size: 50px;
+        font-weight: 200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        min-height: 50px;
+        border: 2px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      button {
+        font-size: 20px;
+        margin-bottom: 10px;
+        border: 2px solid black;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .score-results {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+      }
+      #scoreMsg {
+        font-size: 20px;
+      }
+      #player, #computer {
+        margin: 0 5px;
+      }
+    </style>
   </head>
   <body>
+    <div class="score-count">
+      <div id="playerScore">0</div>
+      <div id="computerScore">0</div>
+    </div>
+    <div class="buttons">
+      <button>Rock</button>
+      <button>Paper</button>
+      <button>Scissors</button>
+    </div>
+    <div class="score-results">
+      <div id="player"></div>
+      <div id="scoreMsg"></div>
+      <div id="computer"></div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
