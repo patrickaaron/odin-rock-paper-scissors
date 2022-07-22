@@ -3,72 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <title>Rock, paper, scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,700;1,100&display=swap" 
+          rel="stylesheet">
     <style>
-      html {
+      body {
         background: rgb(220, 220, 220);
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        font-family: Arial;
+        font-family: "Robot Mono";
+        box-sizing: border-box;
       }
+
       .score-count {
-        background-color:rgb(103, 177, 171);
+        background-color:rgba(74, 161, 190, 0.2);
         color:rgb(42, 42, 42);
-        font-size: 50px;
-        font-weight: 200;
+        font-size: 70px;
+        font-weight: 700;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 60px;
         min-height: 50px;
-        border: 2px solid black;
-        padding: 10px;
-        margin-bottom: 10px;
+        border: 1px solid rgb(162, 162, 162);
+        padding: 15px;
+        margin-bottom: 20px;
         border-radius: 5px;
+        box-shadow: 2px 1px 7px rgba(28, 98, 58, 0.4);
       }
+
+      #playerScore, #computerScore {
+        transition: text-shadow 0.3s ease-out;
+      }
+
+      .neon {
+        color: rgb(0, 60, 139);
+        text-shadow:
+        0 0 4px #000,
+        0 0 38px rgb(0, 60, 139),
+        0 0 73px rgb(0, 60, 139);
+      }
+
       .buttons {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
       }
+
       button {
-        font-size: 20px;
+        background-color:rgba(74, 161, 190, 0.2);
+        font-size: 32px;
+        font-weight: 100;
         margin-bottom: 10px;
-        border: 2px solid black;
-        padding: 10px;
+        border: 1px solid rgb(162, 162, 162);
+        padding: 10px 15px;
         cursor: pointer;
         border-radius: 5px;
+        box-shadow: 2px 1px 7px rgba(28, 98, 58, 0.4);
       }
+
       .score-results {
+        font-family: "Roboto Mono";
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 50px;
       }
+
       #scoreMsg {
         font-size: 20px;
       }
+
       #player, #computer {
         margin: 0 5px;
       }
     </style>
   </head>
   <body>
-    <div class="score-count">
-      <div id="playerScore">0</div>
-      <div id="computerScore">0</div>
-    </div>
-    <div class="buttons">
-      <button>Rock</button>
-      <button>Paper</button>
-      <button>Scissors</button>
-    </div>
-    <div class="score-results">
-      <div id="player"></div>
-      <div id="scoreMsg"></div>
-      <div id="computer"></div>
+    <div class="game-area">
+      <div class="score-count">
+        <div id="playerScore">0</div>
+        <div id="computerScore">0</div>
+      </div>
+      <div class="buttons">
+        <button data-id="Rock">🪨</button>
+        <button data-id="Paper">📄</button>
+        <button data-id="Scissors">✂️</button>
+      </div>
+      <div class="score-results">
+        <div id="scoreMsg"></div>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
